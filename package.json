@@ -1,0 +1,21 @@
+{
+  "name": "controlscreen",
+  "version": "1.0.0",
+  "description": "桌面控制",
+  "main": "app.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:render\" \"wait-on http://localhost:8080 && npm run start:main\" ",
+    "start:main": "electron .",
+    "start:render": "cd render && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "wait-on": "^4.0.2"
+  },
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}
